@@ -1,0 +1,266 @@
+.logo {
+  background-image: url("../homeImagesCss/antardharalogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 80px;
+  position: relative; /* ✅ fixed */
+}
+
+/* Letters of Antardhara */
+.logo .dancing span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #bb4545;
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  margin-top: 15px;
+}
+
+/* Delay each letter */
+.logo .dancing span:nth-child(1) { animation-delay: 0s; }
+.logo .dancing span:nth-child(2) { animation-delay: 0.1s; }
+.logo .dancing span:nth-child(3) { animation-delay: 0.2s; }
+.logo .dancing span:nth-child(4) { animation-delay: 0.3s; }
+.logo .dancing span:nth-child(5) { animation-delay: 0.4s; }
+.logo .dancing span:nth-child(6) { animation-delay: 0.5s; }
+.logo .dancing span:nth-child(7) { animation-delay: 0.6s; }
+.logo .dancing span:nth-child(8) { animation-delay: 0.7s; }
+.logo .dancing span:nth-child(9) { animation-delay: 0.8s; }
+
+/* Keyframes for up & down wave */
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Normal tagline */
+.sub_logo .tagline {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
+}
+
+.nav_logo {
+  display: flex;
+  margin-left: 80px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body{
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+  }
+
+/* Navbar */
+nav {
+  color: rgba(255, 255, 255, 0.849);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav_container {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav_details {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 11px 6px;
+  margin-right: -87px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 33px;
+}
+
+nav ul li {
+  position: relative; /* for dropdown */
+  
+  align-items: center;
+  gap: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav_details .sub_menu1 ul li a {
+  
+  text-transform: capitalize;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+.arrow {
+  margin: 4px;  
+  display: inline-block;
+  font-size: 0.7em;
+  transition: transform 0.3s;
+}
+
+
+
+li:hover .arrow {
+  transform: rotate(180deg); /* ✅ fixed */
+}
+
+/* Dropdown container */
+li {
+  position: relative; /* so dropdown positions relative to parent */
+}
+
+/* Dropdown menu */
+.sub_menu1 {
+  display: none;
+  position: absolute;
+   top: 100%;
+  left: 0;
+  border-top: 0.75rem solid transparent;
+  background-color: rgb(255, 255, 255);
+  min-width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 300;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  width: max-content;
+  
+}
+.sub_menu1 ul{
+  width: 100% !important;
+}
+/* Show submenu */
+ul li:hover .sub_menu1 {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Submenu list layout */
+.sub_menu1 ul {
+  display: block;  /* vertical stack */
+  margin: 0;
+  padding: 0;
+}
+.sub_menu1 li {
+  display: block;
+}
+.sub_menu1 li a {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(76, 76, 76);
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  
+}
+.sub_menu1 li a:hover {
+  background: #555;
+  color: #ff9800;
+}
+
+nav ul li {
+  position: relative;
+  padding-bottom: 8px;  /* extends hover area */
+}
+.sub_menu1 {
+  top: 100%; /* safe placement */
+}
+
+.sub_menu1 ul li span{
+  float: right;
+  margin-right: 10px;
+}
+
+
+
+/* Call/WhatsApp/Sign-in styles */
+.nav_call_whatsapp_signin {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.nav_call_logo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: background 0.2s, color 0.2s;
+}
+
+
+.nav_call_logo a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.nav_whatsapp_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  border-radius: 50%;
+  width: 40px;   /* fixed width */
+  height: 40px;  /* fixed height */
+  color: #fff;
+  font-size: 20px;  /* keep icon size slightly smaller than box */
+}
+
+
+.signin-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #fff;
+  text-decoration: none; /* underline हटाने के लिए */
+  border-radius: 28px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease;
+}

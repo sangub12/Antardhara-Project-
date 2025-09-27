@@ -1,0 +1,1065 @@
+.logo {
+  background-image: url("../homeImagesCss/antardharalogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 80px;
+  position: relative;
+  /* ✅ fixed */
+}
+
+/* Letters of Antardhara */
+.logo .dancing span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #bb4545;
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  margin-top: 15px;
+}
+
+/* Delay each letter */
+.logo .dancing span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.logo .dancing span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.logo .dancing span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.logo .dancing span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.logo .dancing span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.logo .dancing span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.logo .dancing span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.logo .dancing span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.logo .dancing span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+/* Keyframes for up & down wave */
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Normal tagline */
+.sub_logo .tagline {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
+}
+
+.nav_logo {
+  display: flex;
+  margin-left: 80px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  color: rgba(255, 255, 255, 0.849);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+.nav_container {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  /* keep it above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* optional shadow */
+}
+
+.nav_details {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 11px 6px;
+  margin-right: -87px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 33px;
+}
+
+nav ul li {
+  position: relative;
+  /* for dropdown */
+
+  align-items: center;
+  gap: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav_details .sub_menu1 ul li a {
+
+  text-transform: capitalize;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+.arrow {
+  margin: 4px;
+  display: inline-block;
+  font-size: 0.7em;
+  transition: transform 0.3s;
+}
+
+
+
+li:hover .arrow {
+  transform: rotate(180deg);
+  /* ✅ fixed */
+}
+
+/* Dropdown container */
+li {
+  position: relative;
+  /* so dropdown positions relative to parent */
+}
+
+/* Dropdown menu */
+.sub_menu1 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 0.75rem solid transparent;
+  background-color: rgb(255, 255, 255);
+  min-width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 300;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  width: max-content;
+
+}
+
+.sub_menu1 ul {
+  width: 100% !important;
+}
+
+/* Show submenu */
+ul li:hover .sub_menu1 {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Submenu list layout */
+.sub_menu1 ul {
+  display: block;
+  /* vertical stack */
+  margin: 0;
+  padding: 0;
+}
+
+.sub_menu1 li {
+  display: block;
+}
+
+.sub_menu1 li a {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(76, 76, 76);
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+
+}
+
+.sub_menu1 li a:hover {
+  background: #555;
+  color: #ff9800;
+}
+
+nav ul li {
+  position: relative;
+  padding-bottom: 8px;
+  /* extends hover area */
+}
+
+.sub_menu1 {
+  top: 100%;
+  /* safe placement */
+}
+
+.sub_menu1 ul li span {
+  float: right;
+  margin-right: 10px;
+}
+
+
+
+/* Call/WhatsApp/Sign-in styles */
+.nav_call_whatsapp_signin {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.nav_call_logo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: background 0.2s, color 0.2s;
+}
+
+
+.nav_call_logo a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.nav_whatsapp_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  border-radius: 50%;
+  width: 40px;
+  /* fixed width */
+  height: 40px;
+  /* fixed height */
+  color: #fff;
+  font-size: 20px;
+  /* keep icon size slightly smaller than box */
+}
+
+
+.signin-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #fff;
+  text-decoration: none;
+  /* underline हटाने के लिए */
+  border-radius: 28px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Background_theme {
+
+  background-image: url("../homeImagesCss/aboutusbanner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+}
+
+.About_Antardhara_p_container {
+  width: 80%;
+  max-width: 80rem;
+  margin: auto;
+}
+
+.About_Antardhara_c_container {
+  width: 596px;
+  padding-top: 285px;
+}
+
+.Antardhara h1 {
+  font-size: 2.44rem;
+  opacity: 1;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand, sans-serif;
+}
+
+.About_Antardhara_detail {
+  opacity: 1;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  line-height: 24px;
+  font-size: 1rem;
+  box-sizing: border-box !important;
+  font-family: Quicksand, sans-serif;
+  outline: none !important;
+  margin-top: 31px;
+}
+
+
+/* The Antardhara Problem Section */
+
+
+.The_Antardhara_Problem_P_Container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.The_Antardhara_Problem_bgLogo {
+  padding-top: 78px;
+  width: 120px;
+  height: 120px
+}
+
+.Antardhara_Problem_Title {
+  text-align: left;
+  color: rgb(231, 105, 67);
+  line-height: 32px;
+  font-size: 1.95rem;
+  margin: 0px;
+  padding: 0px;
+  width: 95%;
+  font-family: Quicksand, sans-serif;
+  margin-bottom: 47px;
+}
+
+.Antardhara_Problem_Detail {
+  width: 95%;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+/* The Antardhara Solution Section */
+
+
+.The_Antardhara_Solution_P_Container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.The_Antardhara_Solution_bgLogo {
+  padding-top: 78px;
+  width: 120px;
+  height: 120px
+}
+
+.Antardhara_Solution_Title {
+  text-align: left;
+  color: rgb(78, 97, 55);
+  line-height: 32px;
+  font-size: 1.95rem;
+  margin: 0px;
+  padding: 0px;
+  width: 95%;
+  font-family: Quicksand, sans-serif;
+  margin-bottom: 47px;
+}
+
+.Antardhara_Solution_Detail {
+  width: 95%;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+/*Antardhara Quote Section */
+.Antardhara_quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(242, 205, 194);
+  border-radius: 12px;
+  padding: 29px 7px;
+
+}
+
+.mental-health-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  width: 70%;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  /* "unset" replaced with more standard "default" */
+}
+
+.Antadhara_quote_container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+}
+
+/*Antardhara detail line Section */
+
+.Antardhara_brief_detail_inner_container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+}
+
+.Antardhara_brief_detail h4 {
+  color: rgb(76, 76, 76);
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+
+/*Antardhara Approach Section */
+
+.Antardhara_Approach {
+  background-color: rgb(233, 239, 226);
+  padding: 5rem 0px;
+}
+
+.Antardhara_Approach_Container_P {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+}
+
+.Antardhara_Approach_Title {
+  display: flex;
+  flex-flow: column;
+  margin: 0px;
+  padding: 0px;
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.Antardhara_Approach_Title .Antardhara_Title_Name {
+  text-align: center;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  font-weight: 700;
+  font-size: 2.44rem;
+
+}
+
+.Antardhara_Approach_Title .Antardhara_Aproach_detail {
+  font-size: 1rem;
+  line-height: 74px;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+/*Antardhara Promise content Section */
+
+.Antardhara_Approach_bgimage_details {
+  display: flex;
+  gap: 120px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: auto;
+}
+
+.accordion-item {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  margin: 50px auto;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 20px;
+  font-family: Quicksand, sans-serif;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.accordion-header h5 {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+
+
+.accordion-content p {
+  display: flex;
+  align-items: flex-start;
+  margin: 7px 0;
+}
+
+.accordion-content p::before {
+  content: "";
+  /* Replace with your actual Approach Icon */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Active state */
+.accordion-item.active {
+  background: #2e7d32;
+  /* green */
+  color: #fff;
+  height: 300px;
+}
+
+.accordion-item.active .accordion-icon {
+  background: #fff;
+  color: #2e7d32;
+  transform: rotate(180deg);
+}
+
+.accordion-content .ledpoint_container,
+.accordion-content .ledpoint_container2,
+.accordion-content .ledpoint_container3,
+.accordion-content .science_container,
+.accordion-content .science_container2,
+.accordion-content .science_container3,
+.accordion-content .ecosystem_container,
+.accordion-content .ecosystem_container2,
+.accordion-content .ecosystem_container3 {
+  display: flex;
+}
+
+
+/*Antardhara Helath & priority */
+
+.Helath_Priority_p_container {
+  background-color: #ffffff;
+  padding: 5rem 0px;
+
+
+}
+
+.Health_Priority_c_container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+
+}
+
+.Antardhara_Health_Priority_Title {
+  display: flex;
+  flex-flow: column;
+  margin: 0px;
+  padding: 0px;
+  max-width: 994px;
+  position: relative;
+  margin: auto;
+}
+
+.Antardhara_Health_Priority_Title .Antardhara_health_priority {
+  text-align: center;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  font-weight: 700;
+  font-size: 2.44rem;
+  margin: auto;
+
+}
+
+.Antardhara_Health_Priority_Title .Antardhara_health_priority_detail {
+  font-size: 1rem;
+  line-height: 60px;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand, sans-serif;
+  width: 1138px;
+
+}
+
+.Antardhara_Health_Priority_Title .Antardhara_health_priority_detail span {
+  color: rgb(231, 105, 67);
+  font-family: Quicksand, sans-serif;
+  
+}
+
+.Users_followers_p_container {
+  background-color: #ffffff;
+  padding: 5rem 0px;
+  margin-top: -120px;
+}
+
+.Users_followers_c_container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.millions_container,
+.clients_container,
+.Users_container {
+  display: flex;
+  flex-direction: column;
+  border-right: solid 2px rgb(233, 233, 233);
+  padding-left: 10px;
+  width: 303px;
+
+}
+
+.Antardhara_million_conainer {
+
+  display: flex;
+  justify-content: center;
+  /* centers horizontally */
+  align-items: center;
+  /* centers vertically */
+
+}
+
+.Users_followers_details {
+  display: flex;
+  flex-direction: column;
+  width: 286px;
+  justify-content: center;
+
+
+}
+
+.Users_followers_details .Users_followers_title {
+  padding-bottom: 10px;
+  font-size: 1.25rem;
+  color: rgb(78, 97, 55);
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  font-family: "Quicksand";
+}
+
+.Users_followers_details .Users_followers_subtitle {
+
+  opacity: 1;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  white-space: inherit;
+  text-transform: none;
+  text-decoration: none;
+  word-break: inherit;
+  display: block;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Quicksand";
+  color: rgb(51, 58, 58);
+}
+
+/*Antardhara Founder Note section */
+
+
+.Founder_Note_p_container {
+  background-color: #f9dad0;
+  padding: 5rem 0px;
+  height: auto;
+}
+
+.Founder_Note_c_container {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex; 
+  gap: 199px; 
+}
+
+.Founder_note_Title_details .Founder_title_container{
+  font-size: 2.44rem;
+  line-height: 60px;
+  font-weight: 700;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand,sans-serif;
+}
+
+.Founder_note_Title_details .note_details_of_founder{
+  font-size: 1rem;
+  font-family: Quicksand,sans-serif;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  width: 550px;
+
+}
+
+.Founder_name_container .Founder_name{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 25px;
+  gap: 5px;
+  margin-top: 19px;
+  color: #e76943;
+  font-family: Quicksand,sans-serif;
+}
+
+.Founder_name_container .Founder_des{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  color: rgb(76, 76, 76);
+  font-family: Quicksand,sans-serif;
+  margin: 0px;
+  padding: 0px;
+  line-height: 32px;
+}
+
+/*Antardhara Meet Leader of Antardhar section */
+
+.Meet_leader_Antardhara_P_container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.Meet_leader_title {
+  margin-bottom: 30px;
+}
+
+.meet_leader_title_name {
+  font-size: 2.44rem;
+  line-height: 60px;
+  opacity: 1;
+  font-weight: 700;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand,sans-serif;
+}
+
+.meet_leader_detail {
+ font-size: 1rem;
+  line-height: 24px;
+  opacity: 1;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: Quicksand,sans-serif;
+}
+
+/* Profile grid */
+.Meet_leader_pic1_container {
+  width: 95%;
+  max-width: 80rem;       /* same max width as your Founder container */
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;         /* allows profiles to wrap on smaller screens */
+  justify-content: space-between; /* spreads items across the container */
+  gap: 40px;               /* space between profiles */
+  padding: 20px 0;         /* optional top/bottom padding */
+}
+
+.meetleader_profile_container {
+  flex: 0 1 180px;         /* min width for each profile, can shrink if needed */
+}
+
+
+.meetleader_profile_container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.profile_picture_images {
+  width: 100%;
+  height: 88%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay text */
+.profile_names_container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile_names_container h2,
+.profile_names_container h6 {
+  margin: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: Quicksand,sans-serif;
+  
+}
+
+.meetleader_profile_container:hover .profile_names_container {
+  opacity: 1;
+}
+
+/* Popup */
+.popup_overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup_content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  width: 37.5rem;
+  height: 37.5rem;
+}
+
+.popup_content img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.popup_content h2,
+.popup_content h6 {
+  margin: 10px 0;
+}
+
+.popup_content h2 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: rgb(25, 63, 42);
+  font-family: Quicksand,sans-serif;
+}
+.popup_content h6 {
+  color: rgb(76, 76, 76);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Overlay Circle */
+.profile_names_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.profile_overlay h2,
+.profile_overlay h6 {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.meetleader_profile_container:hover .profile_overlay {
+  opacity: 1;
+}
+
+/* Profile grid */
+.Meet_leader_pic2_container {
+ width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 46px;
+  padding: 5px 0;
+}
+
+.ceo_detail{
+  flex: 1 1 0%;
+  height: 10rem;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(76, 76, 76) rgb(255, 255, 255);
+  padding: 0px 1rem 1.5rem;
+  height: 275px;
+
+}
+
+.ceo_detail_note{
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: rgb(76, 76, 76);
+  font-weight: 500;
+  font-family: "Quicksand";
+}
+
+
