@@ -1083,3 +1083,246 @@ nav ul li {
   font-weight: 500;
   color: rgb(76, 76, 76);
 }
+
+/*Antardhara Get in Touch section */
+
+.Git_in_touch_parent {
+  background-color: #e9efe2;
+  padding: 3rem 0px;
+
+
+}
+
+.Git_in_touch_Children {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+
+}
+
+.Git_in_touch_Children h2{
+  font-size: 2.44rem;
+  line-height: 60px;
+  opacity: 1;
+  font-weight: 700;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  font-family: Quicksand,sans-serif;
+}
+
+.div_connect_with_us_container{
+  display: flex;
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 98px;
+}
+
+.connect_with_us_child_container,
+.parnter_connect_with_us_container,
+.work_with_us_container{
+  display: flex;
+  flex-flow: column;
+  gap: 26px;
+  width: 289px;
+}
+
+.connect_with_us_note_container,
+.partner_with_us_note_container,
+.work_with_us_note_container h4{
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgb(76, 76, 76);
+  text-align: center;
+  font-family: Quicksand,sans-serif;
+}
+
+.connect_link,
+.partner_link,
+.work_link {
+ color: rgb(234, 124, 91);
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-family: Quicksand,sans-serif;
+  font-weight: 700;
+  border: transparent;
+  background: transparent;
+  text-decoration: underline;
+}
+
+/*Antardhara Get in Touch sub section */
+
+.Reach_out_parent_container {
+  background-color: rgb(78, 97, 55);
+  padding: 1.5rem 0px;
+
+
+}
+
+.Reach_out_child_container  {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  font-family: "Quicksand";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+
+}
+
+.Reach_out_child_container a {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+  font-family: "Quicksand";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+
+}
+
+/*Antardhara services about us bottom section */
+
+.about_services_all_details_p_container {
+  background: rgb(255, 255, 255);
+  padding: 3rem 0px;
+
+
+}
+
+.about_services_center_container_child {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+
+}
+
+.about_center_sub_container{
+  display: flex;
+  gap: 141px;
+}
+
+
+.About_us_antardhara_container > span,
+.services_antardhara_container > span,
+.conditions_antardhara_container > span,
+.center_antardhara_container > span {
+  font-size: 0.6rem;
+  font-family: Quicksand, sans-serif;
+  letter-spacing: 0.16rem;
+  font-weight: 700;
+  color: rgb(165, 165, 165);
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.About_us_antardhara_container > div > span,
+.services_antardhara_container > div > span,
+.conditions_antardhara_container > div > span,
+.center_antardhara_container > div > span {
+font-size: 0.8rem;
+line-height: 30px;
+font-weight: 500;
+color: rgb(76, 76, 76);
+text-align: left;
+margin: 0px;
+padding: 0px;
+font-family: Quicksand,sans-serif;
+}
+
+.best_app_antardhara_container .About_Antardhara_Title{
+  width: 202px;
+  font-family: "Quicksand";
+  color: rgb(76, 76, 76);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.best_app_good .Best_app{
+  font-family: "Quicksand";
+  opacity: 1;
+  color: rgb(76, 76, 76);
+  text-align: right;
+  font-weight: 700;
+  line-height: 1.5rem;
+  word-break: inherit;
+  font-size: 1.25rem;
+}
+
+  
+.best_app_good .google_play_note{
+  font-family: "Quicksand";
+  opacity: 1;
+  color: rgb(76, 76, 76);
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 125px;
+}
+
+.best_app_antardhara_container{
+    width: 196px;
+}
+
+.Best_app_p_container{
+  display: flex;
+  justify-content: center;
+  margin-top: 82px;
+
+  
+}
+
+.partnership_experts_center_container_child {
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
+
+}
+
+.partnership_experts_center_container_sub_child{
+  display: flex;
+  margin-top: 100px;
+  gap: 0.6rem 124px;
+  
+}
+
+.Partnerships_antardhara_container > span,
+.Experts_antardhara_container > span,
+.Library_antardhara_container > span {
+  font-size: 0.6rem;
+  font-family: Quicksand, sans-serif;
+  letter-spacing: 0.16rem;
+  font-weight: 700;
+  color: rgb(165, 165, 165);
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.Partnerships_antardhara_container > div > span,
+.Experts_antardhara_container > div > span,
+.Library_antardhara_container > div > span{
+font-size: 0.8rem;
+line-height: 30px;
+font-weight: 500;
+color: rgb(76, 76, 76);
+text-align: left;
+margin: 0px;
+padding: 0px;
+font-family: Quicksand,sans-serif;
+}
+
+
+  
