@@ -1,0 +1,769 @@
+.logo {
+    background-image: url("../homeImagesCss/antardharalogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 80px;
+    position: relative;
+    /* ✅ fixed */
+}
+
+/* Letters of Antardhara */
+.logo .dancing span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bb4545;
+    display: inline-block;
+    animation: wave 1.5s infinite;
+    margin-top: 15px;
+}
+
+/* Delay each letter */
+.logo .dancing span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.logo .dancing span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.logo .dancing span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.logo .dancing span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.logo .dancing span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.logo .dancing span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.logo .dancing span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.logo .dancing span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.logo .dancing span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for up & down wave */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Normal tagline */
+.sub_logo .tagline {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 20px;
+}
+
+.nav_logo {
+    display: flex;
+    margin-left: 80px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    color: rgba(255, 255, 255, 0.849);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+.nav_container {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_details {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 11px 6px;
+    margin-right: -87px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 33px;
+}
+
+nav ul li {
+    position: relative;
+    /* for dropdown */
+
+    align-items: center;
+    gap: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav_details .sub_menu1 ul li a {
+
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.arrow {
+    margin: 4px;
+    display: inline-block;
+    font-size: 0.7em;
+    transition: transform 0.3s;
+}
+
+
+
+li:hover .arrow {
+    transform: rotate(180deg);
+    /* ✅ fixed */
+}
+
+/* Dropdown container */
+li {
+    position: relative;
+    /* so dropdown positions relative to parent */
+}
+
+/* Dropdown menu */
+.sub_menu1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 0.75rem solid transparent;
+    background-color: rgb(255, 255, 255);
+    min-width: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 300;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    width: max-content;
+
+}
+
+.sub_menu1 ul {
+    width: 100% !important;
+}
+
+/* Show submenu */
+ul li:hover .sub_menu1 {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Submenu list layout */
+.sub_menu1 ul {
+    display: block;
+    /* vertical stack */
+    margin: 0;
+    padding: 0;
+}
+
+.sub_menu1 li {
+    display: block;
+}
+
+.sub_menu1 li a {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(76, 76, 76);
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: left;
+
+}
+
+.sub_menu1 li a:hover {
+    background: #555;
+    color: #ff9800;
+}
+
+nav ul li {
+    position: relative;
+    padding-bottom: 8px;
+    /* extends hover area */
+}
+
+.sub_menu1 {
+    top: 100%;
+    /* safe placement */
+}
+
+.sub_menu1 ul li span {
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+/* Call/WhatsApp/Sign-in styles */
+.nav_call_whatsapp_signin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.nav_call_logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: background 0.2s, color 0.2s;
+}
+
+
+.nav_call_logo a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.nav_whatsapp_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    border-radius: 50%;
+    width: 40px;
+    /* fixed width */
+    height: 40px;
+    /* fixed height */
+    color: #fff;
+    font-size: 20px;
+    /* keep icon size slightly smaller than box */
+}
+
+
+.signin-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    /* underline हटाने के लिए */
+    border-radius: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Career bg image form */
+
+.career_page_container_p {
+    background-image: url("../career_images/career_bg_image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 120px;
+    /* 👈 same or slightly larger than navbar height */
+}
+
+.career_page_container_c {
+    width: 60%;
+    max-width: 88rem;
+    margin: auto;
+    display: flex;
+    gap: 122px;
+}
+
+.career_page_container_c .Career_at_Antardhara_container {
+    width: 362px;
+    display: flex;
+    flex-flow: column;
+    gap: 39px;
+    margin-top: 286px;
+}
+
+
+.career_form_container {
+    background: #fff;
+    max-width: 505px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.career_form_container h2 {
+    margin-bottom: 3px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+}
+
+.career_form_container .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Floating label groups */
+.form-group {
+    position: relative;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.25);
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:focus+label,
+.form-group textarea:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #4CAF50;
+    background: #fff;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed #bbb;
+    border-radius: 14px;
+    padding: 25px;
+    cursor: pointer;
+    background: #f9f9f9;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.upload-box input[type="file"] {
+    display: none;
+}
+
+.upload-box .upload-text {
+    color: #777;
+    font-size: 14px;
+}
+
+.upload-box.dragging {
+    border-color: #4CAF50;
+    background: #f1fff1;
+}
+
+/* Textarea */
+.form-group textarea {
+    resize: none;
+    min-height: 65px;
+    margin-top: 20px;
+}
+
+/* Character counter */
+.char-count {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Checkbox row */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Submit Button */
+.career_form_container button {
+    background: linear-gradient(135deg, #df8569, #e76943);
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    /* % of screen width */
+    max-width: 650px;
+    /* maximum width */
+    min-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.career_form_container button:hover {
+    background: linear-gradient(135deg, #df8569, #e76943);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
+}
+
+/* Phone input flags */
+.iti {
+    width: 100%;
+}
+
+/* Disabled button */
+/* .career_form_container button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+} */
+
+.Career_at_Antardhara_container h1 {
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.Career_at_Antardhara_container h3 {
+    font-size: 1.25rem;
+    line-height: 28px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 2.5rem 0px;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.about_ls {
+    top: 11px !important;
+    left: 10px;
+    font-size: 12px;
+    color: #4CAF50;
+    background: #fff;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+/* Job openings Sections */
+
+.Current_job_parent_container {
+    background-color: rgb(237, 245, 227);
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.Current_job_child_container {
+    width: 100%;
+    max-width: 95rem;
+    margin: auto;
+}
+
+.current_job_openings h2 {
+    font-size: 1.56rem;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    text-align: center;
+    margin: 0px 0px -1.4rem;
+    padding: 40px;
+    font-family: Quicksand, sans-serif;
+
+}
+
+.current_job_openings h4 {
+    font-size: 1rem;
+    line-height: 24px;
+    opacity: 1;
+    font-weight: 500;
+    color: rgb(76, 76, 76);
+    text-align: center;
+    padding: 0px;
+    margin: 0px 0px -1.4rem;
+    font-family: Quicksand, sans-serif;
+    margin-bottom: 45px;
+}
+
+.operations_container,
+.care_container h3 {
+    font-size: 1.25rem;
+    line-height: 28px;
+    opacity: 1;
+    font-weight: 700;
+    color: rgb(231, 105, 67);
+    text-align: center;
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.operation_manager_parent_container,
+.care_manager_parent_container {
+
+    background: rgb(255, 255, 255);
+    padding: 1.5rem 2.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+
+.operation_m_container>h4,
+.care_m_container h4 {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    text-align: left;
+    margin: 0px 0px 0.5rem;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.button_container button {
+    background-color: rgb(231, 105, 67);
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    min-width: 12.5rem;
+    font-size: 0.875rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(231, 105, 67);
+    overflow: hidden;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    height: 40px;
+    font-weight: 700;
+    font-family: Quicksand, sans-serif;
+
+}
+
+/* queries us block section */
+
+.queries_p_container {
+    background-color: rgb(252, 236, 232);
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.queries_c_container {
+    width: 100%;
+    max-width: 95rem;
+    margin: auto;
+}
+
+.queries_c_container h2,
+h4 {
+    text-align: center;
+    padding-top: 24px;
+}
+
+.queries_c_container h2 {
+    font-size: 1.56rem;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    font-family: Quicksand, sans-serif;
+}
+
+.queries_c_container .dro_mail_details {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(76, 76, 76);
+    font-family: Quicksand, sans-serif;
+}
+
+.queries_c_container .email_id_drop {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: Quicksand, sans-serif;
+}
+
+.queries_c_container .email_id_drop a {
+    text-decoration: none;
+    color: rgb(231, 105, 67);
+}
+
+
+/* why work at amaha block section */
+
+.why_work_at_antardhara_bg_container {
+    margin-top: 25px;
+}
+
+.why_work_child_contain {
+    width: 100%;
+    max-width: 95rem;
+    margin: auto;
+    width: 100%;
+  gap: 131px;
+
+}
+
+.why_work_child_contain {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    gap: 10px;
+    
+    
+
+}
+
+.Why_work_atardhara_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    
+}
+
+.build_skill,
+.believe_container,
+.support_container,
+.fast_paced_container,
+.brimmed_container,
+.healthprblm_container {
+    background-color: rgb(252, 236, 232);
+  margin: 0px 0px 1.5rem;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  width: 20rem;
+}
+
+.build_skill > h4,
+.believe_container > h4,
+.support_container > h4,
+.fast_paced_container > h4,
+.brimmed_container > h4,
+.healthprblm_container > h4 {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    text-align: left;
+    margin: 0px 0px 0.3rem;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.build_skill > h5,
+.believe_container > h5,
+.support_container > h5,
+.fast_paced_container > h5,
+.brimmed_container> h5,
+.healthprblm_container > h5 {
+    font-size: 0.8rem;
+    line-height: 20px;
+    font-weight: 500;
+    color: rgb(78, 97, 55);
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    font-family: Quicksand, sans-serif;
+}
+
+.why_work_at_antardhara_container{
+    width: 411px;
+  display: flex;
+  flex-flow: column;
+}
