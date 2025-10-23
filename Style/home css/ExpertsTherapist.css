@@ -1,0 +1,693 @@
+.logo {
+    background-image: url("../homeImagesCss/antardharalogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 80px;
+    position: relative;
+    /* ✅ fixed */
+}
+
+/* Letters of Antardhara */
+.logo .dancing span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bb4545;
+    display: inline-block;
+    animation: wave 1.5s infinite;
+    margin-top: 15px;
+}
+
+/* Delay each letter */
+.logo .dancing span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.logo .dancing span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.logo .dancing span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.logo .dancing span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.logo .dancing span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.logo .dancing span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.logo .dancing span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.logo .dancing span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.logo .dancing span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for up & down wave */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Normal tagline */
+.sub_logo .tagline {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 20px;
+}
+
+.nav_logo {
+    display: flex;
+    margin-left: 80px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    color: rgba(255, 255, 255, 0.849);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+.nav_container {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_details {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 11px 6px;
+    margin-right: -87px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 33px;
+}
+
+nav ul li {
+    position: relative;
+    /* for dropdown */
+
+    align-items: center;
+    gap: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav_details .sub_menu1 ul li a {
+
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.arrow {
+    margin: 4px;
+    display: inline-block;
+    font-size: 0.7em;
+    transition: transform 0.3s;
+}
+
+
+
+li:hover .arrow {
+    transform: rotate(180deg);
+    /* ✅ fixed */
+}
+
+/* Dropdown container */
+li {
+    position: relative;
+    /* so dropdown positions relative to parent */
+}
+
+/* Dropdown menu */
+.sub_menu1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 0.75rem solid transparent;
+    background-color: rgb(255, 255, 255);
+    min-width: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 300;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    width: max-content;
+
+}
+
+.sub_menu1 ul {
+    width: 100% !important;
+}
+
+/* Show submenu */
+ul li:hover .sub_menu1 {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Submenu list layout */
+.sub_menu1 ul {
+    display: block;
+    /* vertical stack */
+    margin: 0;
+    padding: 0;
+}
+
+.sub_menu1 li {
+    display: block;
+}
+
+.sub_menu1 li a {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(76, 76, 76);
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: left;
+
+}
+
+.sub_menu1 li a:hover {
+    background: #555;
+    color: #ff9800;
+}
+
+nav ul li {
+    position: relative;
+    padding-bottom: 8px;
+    /* extends hover area */
+}
+
+.sub_menu1 {
+    top: 100%;
+    /* safe placement */
+}
+
+.sub_menu1 ul li span {
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+/* Call/WhatsApp/Sign-in styles */
+.nav_call_whatsapp_signin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.nav_call_logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    transition: background 0.2s, color 0.2s;
+}
+
+
+.nav_call_logo a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.nav_whatsapp_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    border-radius: 50%;
+    width: 40px;
+    /* fixed width */
+    height: 40px;
+    /* fixed height */
+    color: #fff;
+    font-size: 20px;
+    /* keep icon size slightly smaller than box */
+}
+
+
+.signin-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    /* underline हटाने के लिए */
+    border-radius: 28px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* understand your needs block section */
+
+.Therapist_container_bg {
+    height: 550px;
+    background-color: rgb(255, 245, 242);
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.Therapist_child_container {
+    width: 95%;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.Antardhara_home_icon_container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /* keeps text in one line */
+    width: auto;
+    cursor: default;
+    /* prevents pointer */
+    opacity: 1;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    gap: 6px;
+    /* space between svg and text */
+}
+
+.Antardhara_home_icon_container svg {
+    color: #000;
+    /* change color if needed */
+    font-size: 20px;
+    /* control icon size */
+}
+
+.brand-text {
+    font-weight: 500;
+    color: #333;
+}
+
+.Therapist_child_container {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0px;
+}
+
+.Antardhara_home_icon_container svg {
+    color: rgb(231, 105, 67);
+    font-family: Quicksand, sans-serif;
+
+}
+
+.Antardhara_home_icon_container span {
+    color: rgb(231, 105, 67);
+    font-family: Quicksand, sans-serif;
+    font-size: 0.8rem;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.Psychiatrists_container p {
+    font-family: Quicksand, sans-serif;
+    color: rgb(117, 117, 117);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+.understand_titl {
+    width: 95%;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.understand_titl h1 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-family: Quicksand, sans-serif;
+    color: rgb(76, 76, 76);
+    padding-top: 25px;
+    text-align: center;
+}
+
+.Therapists_parent_button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Thearapist_contain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #4C4C4C;
+    /* SVG inherits this color */
+    background-color: #fff;
+    border: 2px solid #4C4C4C;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Thearapist_contain:hover {
+    background-color: #4C4C4C;
+    color: #fff;
+}
+
+.btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: currentColor;
+    /* Inherit text color */
+    stroke: currentColor;
+}
+
+.Psychiatrist_parent_button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Pyschiatrist_contain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #4C4C4C;
+    /* SVG and text color */
+    background-color: #fff;
+    border: 2px solid #4C4C4C;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Pyschiatrist_contain:hover {
+    background-color: #4C4C4C;
+    color: #fff;
+    /* SVG inherits this color */
+}
+
+.btn-icon {
+    width: 1.25rem;
+    /* Icon width */
+    height: 1.25rem;
+    /* Icon height */
+    fill: none;
+    /* Keep as stroke-only icon */
+    stroke: currentColor;
+    /* Inherit button text color */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ChildYouth_parent_button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.child_youth_contain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #4C4C4C;
+    /* Icon and text color */
+    background-color: #fff;
+    border: 2px solid #4C4C4C;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.child_youth_contain:hover {
+    background-color: #4C4C4C;
+    color: #fff;
+    /* Icon inherits this color */
+}
+
+.btn-icon {
+    width: 1.25rem;
+    /* Icon size */
+    height: 1.25rem;
+    fill: none;
+    /* Stroke-only icon */
+    stroke: currentColor;
+    /* Inherit button text color */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.CoupleTherapist_parent_button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.couple_therapist_contain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between icon and text */
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #4C4C4C;
+    /* Icon and text color */
+    background-color: #fff;
+    border: 2px solid #4C4C4C;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.couple_therapist_contain:hover {
+    background-color: #4C4C4C;
+    color: #fff;
+    /* Icon inherits this color */
+}
+
+.btn-icon {
+    width: 1.25rem;
+    /* Icon width */
+    height: 1.25rem;
+    /* Icon height */
+    fill: none;
+    /* Stroke-only icon */
+    stroke: currentColor;
+    /* Inherit button text color */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.Therapists_parent_button_container {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-top: 20px;
+}
+
+.Therapists_parent_button_container button {
+  width: 15.75rem;
+  height: 3.5rem;
+  padding: 1rem;
+  color: rgb(76, 76, 76);
+  background-color: #fff;
+  border: 1px solid rgb(238, 238, 238);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.Therapists_parent_button_container button .btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Default active (orange) */
+.Therapists_parent_button_container button.active {
+  background-color: rgb(212, 83, 44);
+  color: #fff;
+  border-color: rgb(212, 83, 44);
+}
+
+/* Hover (light pink) */
+.Therapists_parent_button_container button:hover {
+  background-color: rgb(255, 233, 227);
+  border-color: rgb(255, 233, 227);
+  color: rgb(76, 76, 76);
+  cursor: pointer;
+}
+
+/* Keep orange when active (even on hover) */
+.Therapists_parent_button_container button.active:hover {
+  background-color: rgb(212, 83, 44);
+  color: #fff;
+}
+
+/* Default icon color (orange) */
+.btn-icon {
+  stroke: rgb(231, 105, 67);
+  transition: all 0.3s ease;
+}
+
+/* Icon turns white when the button is active */
+button.active .btn-icon {
+  stroke: #fff;
+}
+
+/* Override for CHAT button */
+.Thearapist_contain .btn-icon {
+  stroke: rgb(231, 105, 67); /* orange icon by default */
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+/* When CHAT button is active */
+.Thearapist_contain.active {
+  background-color: rgb(212, 83, 44);
+  color: #fff;
+  border-color: rgb(212, 83, 44);
+}
+
+/* Make icon white when active */
+.Thearapist_contain.active .btn-icon {
+  stroke: #fff;
+}
+
+/* ******** slot book container section **** */
+
+.slot_book_container_parent {
+    background-color: rgb(255, 245, 242);
+}
+
+.slot_book_container_child {
+
+     width: 95%;
+    max-width: 80rem;
+    margin: auto;
+}
+
+/* 
+.Therapist_container_bg {
+    height: 550px;
+    background-color: rgb(255, 245, 242);
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.Therapist_child_container {
+    width: 95%;
+    max-width: 80rem;
+    margin: auto;
+} */
+
+
+
+
+
+

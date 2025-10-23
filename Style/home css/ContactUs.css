@@ -324,540 +324,619 @@ nav ul li {
     align-items: center;
 }
 
-/* Career bg image form */
 
-.career_page_container_p {
-    background-image: url("../career_images/career_bg_image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+/* contact us page bg image */
+
+
+.contact_us_parent_container {
+    height: 800px;
+    background-color: rgb(78, 97, 55);
+    height: auto;
     padding-top: 120px;
-    /* 👈 same or slightly larger than navbar height */
+    padding-bottom: 80px;
 }
 
-.career_page_container_c {
-    width: 60%;
-    max-width: 88rem;
-    margin: auto;
+.Antardhara_home_icon_container {
     display: flex;
-    gap: 122px;
+    align-items: center;
+    white-space: nowrap;
+    /* keeps text in one line */
+    width: auto;
+    cursor: default;
+    /* prevents pointer */
+    opacity: 1;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    gap: 6px;
+    /* space between svg and text */
 }
 
-.career_page_container_c .Career_at_Antardhara_container {
-    width: 362px;
-    display: flex;
-    flex-flow: column;
-    gap: 39px;
-    margin-top: 286px;
+.Antardhara_home_icon_container svg {
+    color: #000;
+    /* change color if needed */
+    font-size: 20px;
+    /* control icon size */
 }
 
-
-.career_form_container {
-    background: #fff;
-    max-width: 505px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-}
-
-.career_form_container h2 {
-    margin-bottom: 3px;
-    font-size: 26px;
-    font-weight: 700;
+.brand-text {
+    font-weight: 500;
     color: #333;
 }
 
-.career_form_container .subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Floating label groups */
-.form-group {
-    position: relative;
-    margin-bottom: 18px;
-    text-align: left;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 16px 14px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    font-size: 15px;
-    background: #fafafa;
-    transition: all 0.3s ease;
-}
-
-.form-group label {
-    position: absolute;
-    left: 14px;
-    top: 16px;
-    color: #888;
-    font-size: 14px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #4CAF50;
-    background: #fff;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.25);
-}
-
-.form-group input:focus+label,
-.form-group input:not(:placeholder-shown)+label,
-.form-group textarea:focus+label,
-.form-group textarea:not(:placeholder-shown)+label {
-    top: -10px;
-    left: 10px;
-    font-size: 12px;
-    color: #4CAF50;
-    background: #fff;
-    padding: 0 6px;
-    border-radius: 6px;
-}
-
-/* Upload Box */
-.upload-box {
-    border: 2px dashed #bbb;
-    border-radius: 14px;
-    padding: 25px;
-    cursor: pointer;
-    background: #f9f9f9;
-    transition: border-color 0.3s, background 0.3s;
-}
-
-.upload-box input[type="file"] {
-    display: none;
-}
-
-.upload-box .upload-text {
-    color: #777;
-    font-size: 14px;
-}
-
-.upload-box.dragging {
-    border-color: #4CAF50;
-    background: #f1fff1;
-}
-
-/* Textarea */
-.form-group textarea {
-    resize: none;
-    min-height: 65px;
-    margin-top: 20px;
-}
-
-/* Character counter */
-.char-count {
-    font-size: 13px;
-    color: #666;
-    margin-top: 5px;
-    text-align: right;
-}
-
-/* Checkbox row */
-.checkbox-row {
+.Therapist_child_container {
     display: flex;
-    align-items: center;
     gap: 10px;
-    margin: 15px 0 25px;
-    font-size: 14px;
-    color: #444;
+    padding: 5px 0px;
 }
 
-/* Submit Button */
-.career_form_container button {
-    background: linear-gradient(135deg, #df8569, #e76943);
-    color: #fff;
-    font-size: 16px;
-    padding: 14px 20px;
-    border-radius: 14px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    width: 90%;
-    /* % of screen width */
-    max-width: 650px;
-    /* maximum width */
-    min-width: 300px;
-    transition: all 0.3s ease;
+.Antardhara_home_icon_container svg {
+
+    font-family: Quicksand, sans-serif;
+
 }
 
-.career_form_container button:hover {
-    background: linear-gradient(135deg, #df8569, #e76943);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
-}
-
-/* Phone input flags */
-.iti {
-    width: 100%;
-}
-
-/* Disabled button */
-/* .career_form_container button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-} */
-
-.Career_at_Antardhara_container h1 {
-    font-weight: 700;
+.Antardhara_home_icon_container span {
     color: rgb(255, 255, 255);
-    text-align: left;
-    margin: 0px;
-    padding: 0px;
     font-family: Quicksand, sans-serif;
-}
-
-.Career_at_Antardhara_container h3 {
-    font-size: 1.25rem;
-    line-height: 28px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    margin: 2.5rem 0px;
-    padding: 0px;
-    font-family: Quicksand, sans-serif;
-}
-
-.about_ls {
-    top: 11px !important;
-    left: 10px;
-    font-size: 12px;
-    color: #4CAF50;
-    background: #fff;
-    padding: 0 6px;
-    border-radius: 6px;
-}
-
-/* Job openings Sections */
-
-.Current_job_parent_container {
-    background-color: rgb(237, 245, 227);
-    height: auto;
-    padding-bottom: 20px;
-}
-
-.Current_job_child_container {
-    width: 100%;
-    max-width: 95rem;
-    margin: auto;
-}
-
-.current_job_openings h2 {
-    font-size: 1.56rem;
-    line-height: 32px;
-    font-weight: 700;
-    color: rgb(76, 76, 76);
-    text-align: center;
-    margin: 0px 0px -1.4rem;
-    padding: 40px;
-    font-family: Quicksand, sans-serif;
-
-}
-
-.current_job_openings h4 {
-    font-size: 1rem;
-    line-height: 24px;
-    opacity: 1;
-    font-weight: 500;
-    color: rgb(76, 76, 76);
-    text-align: center;
-    padding: 0px;
-    margin: 0px 0px -1.4rem;
-    font-family: Quicksand, sans-serif;
-    margin-bottom: 45px;
-}
-
-.operations_container,
-.care_container h3 {
-    font-size: 1.25rem;
-    line-height: 28px;
-    opacity: 1;
-    font-weight: 700;
-    color: rgb(231, 105, 67);
-    text-align: center;
-    margin: 0px 0px 1rem;
-    padding: 0px;
-    font-family: Quicksand, sans-serif;
-}
-
-.operation_manager_parent_container,
-.care_manager_parent_container {
-
-    background: rgb(255, 255, 255);
-    padding: 1.5rem 2.5rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    margin-bottom: 85px;
-}
-
-.operation_m_container>h4,
-.care_m_container h4 {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 700;
-    color: rgb(76, 76, 76);
-    text-align: left;
-    margin: 0px 0px 0.5rem;
-    padding: 0px;
-    font-family: Quicksand, sans-serif;
-}
-
-.button_container button {
-    background-color: rgb(231, 105, 67);
-    color: rgb(255, 255, 255);
-    line-height: 1;
-    min-width: 12.5rem;
-    font-size: 0.875rem;
-    border-radius: 2rem;
-    border: 1px solid rgb(231, 105, 67);
-    overflow: hidden;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
-    height: 40px;
-    font-weight: 700;
-    font-family: Quicksand, sans-serif;
-
-}
-
-/* queries us block section */
-
-.queries_p_container {
-    background-color: rgb(252, 236, 232);
-    height: auto;
-    padding-bottom: 20px;
-}
-
-.queries_c_container {
-    width: 100%;
-    max-width: 95rem;
-    margin: auto;
-}
-
-.queries_c_container h2,
-h4 {
-    text-align: center;
-    padding-top: 24px;
-}
-
-.queries_c_container h2 {
-    font-size: 1.56rem;
-    line-height: 32px;
-    font-weight: 700;
-    color: rgb(76, 76, 76);
-    font-family: Quicksand, sans-serif;
-}
-
-.queries_c_container .dro_mail_details {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 500;
-    color: rgb(76, 76, 76);
-    font-family: Quicksand, sans-serif;
-}
-
-.queries_c_container .email_id_drop {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 700;
-    font-family: Quicksand, sans-serif;
-}
-
-.queries_c_container .email_id_drop a {
-    text-decoration: none;
-    color: rgb(231, 105, 67);
-}
-
-
-/* why work at amaha block section */
-
-.why_work_at_antardhara_bg_container {
-    margin-top: 25px;
-}
-
-.why_work_child_contain {
-    width: 100%;
-    max-width: 95rem;
-    margin: auto;
-    width: 100%;
-    gap: 131px;
-
-}
-
-.why_work_child_contain {
-    display: flex;
-    justify-content: center;
-    flex-flow: row;
-    gap: 180px;
-
-
-
-}
-
-.Why_work_atardhara_grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 1rem;
-    row-gap: 1rem;
-
-}
-
-.build_skill,
-.believe_container,
-.support_container,
-.fast_paced_container,
-.brimmed_container,
-.healthprblm_container {
-    background-color: rgb(252, 236, 232);
-    margin: 0px 0px 1.5rem;
-    padding: 2rem 1rem;
-    border-radius: 8px;
-    width: 20rem;
-}
-
-.build_skill>h4,
-.believe_container>h4,
-.support_container>h4,
-.fast_paced_container>h4,
-.brimmed_container>h4,
-.healthprblm_container>h4 {
-    font-size: 1rem;
-    line-height: 24px;
-    font-weight: 700;
-    color: rgb(76, 76, 76);
-    text-align: left;
-    margin: 0px 0px 0.3rem;
-    padding: 0px;
-    font-family: Quicksand, sans-serif;
-}
-
-.build_skill>h5,
-.believe_container>h5,
-.support_container>h5,
-.fast_paced_container>h5,
-.brimmed_container>h5,
-.healthprblm_container>h5 {
     font-size: 0.8rem;
     line-height: 20px;
     font-weight: 500;
-    color: rgb(78, 97, 55);
-    text-align: left;
-    margin: 0px;
-    padding: 0px;
-    font-family: Quicksand, sans-serif;
 }
 
-.why_work_at_antardhara_container {
-    width: 411px;
+.Contact_us_container p {
+    font-family: Quicksand, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+.brand-text {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.Therapist_child_container {
     display: flex;
-    flex-flow: column;
+    gap: 10px;
+    padding: 5px 0px;
 }
 
-.why_work_at_container {
-    margin-top: 5px;
-    width: 490px;
-    text-align: left;
-}
-
-.why_work_at_container>h2 {
-    text-align: left;
-    font-size: 2.44rem;
-    line-height: 60px;
-    font-weight: 700;
-    color: rgb(76, 76, 76);
-    margin: 0px 0px 1rem;
-    padding: 0px;
+.Antardhara_home_icon_container svg {
+    color: rgb(255, 255, 255);
     font-family: Quicksand, sans-serif;
+
 }
 
-.why_work_at_container>h4 {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 24px;
+.Antardhara_home_icon_container span {
+    color: rgb(255, 255, 255);
+    font-family: Quicksand, sans-serif;
+    font-size: 0.8rem;
+    line-height: 20px;
     font-weight: 500;
-    color: rgb(76, 76, 76);
-    margin: 0px 0px 2rem;
-    padding: 0px;
+}
+
+.Contact_us_container p {
     font-family: Quicksand, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 20px;
 }
 
-/* our values  block section */
-
-.Our_values_container_bg {
-    background-color: rgb(233, 239, 226);
-    justify-content: center;
-    padding: 4.5rem 7.5rem;
-    height: auto;
-}
-
-.our_value_child_container {
-    width: 100%;
-    max-width: 95rem;
+.contact_us_child_container {
+    display: flex;
+    width: 95%;
+    max-width: 80rem;
     margin: auto;
 }
 
-.our_value_child_container>h2 {
-    font-family: Quicksand, sans-serif;
-    color: rgb(76, 76, 76);
-    font-size: 2.44rem;
-    line-height: 60px;
-    text-align: center;
-    font-weight: 700;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 13px;
+.contact_us_title_name_parent {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+    gap: 168px;
 }
 
-.our_value_child_container>h3 {
-    font-family: Quicksand, sans-serif;
-    color: rgb(76, 76, 76);
+.contact_us_name_plate h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.44rem;
+    font-weight: 700;
+    padding-top: 80px;
+}
+
+.contact_us_name_plate .Contact_us_sub_title {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(255, 255, 255);
     font-size: 1.25rem;
-    line-height: 24px;
-    text-align: center;
     font-weight: 500;
-    margin: 0px;
-    padding: 0px;
-
+    width: 100px;
 }
 
-.Respect_kindness_container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    width: 841px;
-    margin: auto;
-    padding: 0px;
-    row-gap: 16px;
-    margin-top: 45px;
+.contact_us_name_plate {
+    width: 787px;
 }
 
-.Respect_kindness_container h4 {
+.Contact_us_img_banner {
+    padding-top: 50px;
+    min-height: 24rem;
+    height: 24rem;
+    width: 24rem;
+    max-width: 24rem;
+    max-height: 24rem;
+}
+
+/* have a question block section */
+
+.have_a_question_container {
+    width: 80%;
+    border-radius: 16px;
+    box-shadow: rgba(76, 76, 76, 0.08) 0px 8px 16px 8px;
+    background-color: rgb(255, 255, 255);
+    margin: -7.5rem auto 0px;
+    z-index: 5;
+    position: relative;
+    padding: 2.5rem;
+}
+
+.have_question_title {
     font-family: Quicksand, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    margin: 0px;
+}
+
+.have_question_title span {
+    color: rgb(231, 105, 67);
+}
+
+/* email block location block call block */
+
+.all_logo_details_container {
+    display: grid;
+    grid-template-columns: 36.33% 36.33% 36.33%;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.email_sub_container,
+.location_sub_container,
+.call_sub_container {
+    text-align: center;
+
+}
+
+.email_title_div>h4,
+.loc_title_div>h4,
+.call_title_div>h4 {
+    font-family: Quicksand, sans-serif;
+    line-height: 16px;
+    color: rgb(231, 105, 67);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.16rem;
+    text-transform: uppercase;
+    margin: 0px;
+    text-underline-offset: 2px;
+    padding: 0px;
+}
+
+.email_id_container>h5,
+.loc_address_container>h5,
+.call_id_container>h5 {
     font-size: 1rem;
-    line-height: 24px;
-    opacity: 1;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(76, 76, 76);
+    font-family: Quicksand, sans-serif;
+}
+
+.email_id_container>span,
+.loc_address_container>span,
+.call_id_container>span {
+    font-size: 0.8rem;
+    line-height: 1.5;
     font-weight: 500;
     color: rgb(76, 76, 76);
     text-align: center;
     margin: 0px;
     padding: 0px;
+    letter-spacing: unset;
+    font-family: Quicksand, sans-serif;
+}
+
+.email_title_div,
+.loc_title_div,
+.call_title_div {
+    padding-top: 20px;
+}
+
+.email_id_container,
+.loc_address_container,
+.call_id_container {
+    padding-top: 20px;
+}
+
+.email_id_container>h5,
+.loc_address_container>h5,
+.call_id_container>h5 {
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+    text-align: center;
+}
+
+/* we love hear block section */
+
+.love_hear_child_container {
+    display: flex;
+  max-width: 95%;
+  margin: auto;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    background: linear-gradient(to right,#df8a70 , #ea7551);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.we_love_container h2 {
+    font-size: 2.44rem;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  font-weight: 700;
+}
+
+.we_love_container h3{
+    font-size: 1rem;
+  line-height: 28px;
+  opacity: 1;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  font-family: Quicksand,san-serif;
+}
+
+.form-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.form-body {
+    padding: 40px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.form-group {
+    flex: 1 0 100%;
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+
+.form-group.half {
+    flex: 1 0 50%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.phone-input-container>input {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-group>label {
+    font-family: 'Quicksand', sans-serif;
+}
+
+ .input-container >select >option {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-container > select  {
+    font-family: Quicksand, sans-serif;
+}
+
+.queryType {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-container>textarea {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.submit-btn,
+.form-footer {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-container>input {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.phone-group>label {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.country-code-inner>span {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.captcha-container>label {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-container {
+    width: 913px;
+}
+
+.form-row>div>label {
+    margin-left: 14px;
+}
+
+.input-container>input {
+    margin-left: 14px;
+    width: 281px;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.input-container {
+    position: relative;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e5ee;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e08013;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1);
+}
+
+.phone-group {
+    position: relative;
+}
+
+.phone-input-container {
+    display: flex;
+}
+
+.country-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f3f5;
+    border: 2px solid #e1e5ee;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 130px;
+}
+
+.country-code:hover {
+    background: #e9ecef;
+}
+
+.country-flag {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.country-code-text {
+    font-weight: 600;
+    color: #495057;
+}
+
+.phone-input {
+    border-radius: 0 10px 10px 0;
+    flex: 1;
+}
+
+.country-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    margin-top: 5px;
+}
+
+.country-dropdown.active {
+    display: block;
+}
+
+.country-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.country-option:hover {
+    background: #f1f3f5;
+}
+
+.country-option .flag {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.country-option .name {
+    flex: 1;
+    color: #495057;
+}
+
+.country-option .code {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 2px solid #e1e5ee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.captcha-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.captcha-text {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #495057;
+}
+
+.captcha-icon {
+    margin-left: 10px;
+    color: #6a11cb;
+}
+
+.submit-btn {
+    background: linear-gradient(to right,#e76943 , #e76943);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 18px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(226, 114, 9, 0.6);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-footer {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid #e9ecef;
+}
+
+@media (max-width: 768px) {
+    .form-group.half {
+        flex: 1 0 100%;
+    }
+
+    .form-body {
+        padding: 30px 20px;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+    .country-dropdown {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .country-code {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-input-container {
+        flex-direction: column;
+    }
+
+    .country-code {
+        border-radius: 10px 10px 0 0;
+        border-right: 2px solid #e1e5ee;
+        border-bottom: none;
+        padding: 12px 15px;
+        min-width: 100%;
+    }
+
+    .phone-input {
+        border-radius: 0 0 10px 10px;
+    }
 }
 
 /*Antardhara Get in Touch sub section */
@@ -1148,6 +1227,10 @@ margin-bottom: 26px;
   justify-content: space-around;
   gap: 30px;
   display: flex;
+}
+
+.from_we_love_container {
+    padding-bottom: 40px;
 }
 
 /*Antardhara copyright policy privacy bottom section */
