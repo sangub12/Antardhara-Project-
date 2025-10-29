@@ -1,574 +1,574 @@
 .logo {
-    background-image: url("../homeImagesCss/antardharalogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 120px;
-    height: 80px;
-    position: relative;
-    /* ✅ fixed */
+  background-image: url("../homeImagesCss/antardharalogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 80px;
+  position: relative;
+  /* ✅ fixed */
 }
 
 /* Letters of Antardhara */
 .logo .dancing span {
-    font-size: 20px;
-    font-weight: bold;
-    color: #bb4545;
-    display: inline-block;
-    animation: wave 1.5s infinite;
-    margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #bb4545;
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  margin-top: 15px;
 }
 
 /* Delay each letter */
 .logo .dancing span:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .logo .dancing span:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .logo .dancing span:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .logo .dancing span:nth-child(4) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .logo .dancing span:nth-child(5) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .logo .dancing span:nth-child(6) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .logo .dancing span:nth-child(7) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .logo .dancing span:nth-child(8) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 .logo .dancing span:nth-child(9) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 /* Keyframes for up & down wave */
 @keyframes wave {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-12px);
-    }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /* Normal tagline */
 .sub_logo .tagline {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    color: #555;
-    margin-top: 20px;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
 }
 
 .nav_logo {
-    display: flex;
-    margin-left: 80px;
+  display: flex;
+  margin-left: 80px;
 }
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Navbar */
 nav {
-    color: rgba(255, 255, 255, 0.849);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.849);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 
 }
 
 .nav_container {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav_details {
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    padding: 11px 6px;
-    margin-right: -87px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 11px 6px;
+  margin-right: -87px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 33px;
+  list-style: none;
+  display: flex;
+  gap: 33px;
 }
 
 nav ul li {
-    position: relative;
-    /* for dropdown */
+  position: relative;
+  /* for dropdown */
 
-    align-items: center;
-    gap: 5px;
+  align-items: center;
+  gap: 5px;
 }
 
 nav a {
-    text-decoration: none;
-    color: rgb(121, 121, 121);
-    font-size: 0.8rem;
-    font-weight: 700;
-    font-family: 'Quicksand', sans-serif;
-    text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(121, 121, 121);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
 }
 
 .nav_details .sub_menu1 ul li a {
 
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 nav ul li a:hover {
-    color: #ff9800;
+  color: #ff9800;
 }
 
 .arrow {
-    margin: 4px;
-    display: inline-block;
-    font-size: 0.7em;
-    transition: transform 0.3s;
+  margin: 4px;
+  display: inline-block;
+  font-size: 0.7em;
+  transition: transform 0.3s;
 }
 
 
 
 li:hover .arrow {
-    transform: rotate(180deg);
-    /* ✅ fixed */
+  transform: rotate(180deg);
+  /* ✅ fixed */
 }
 
 /* Dropdown container */
 li {
-    position: relative;
-    /* so dropdown positions relative to parent */
+  position: relative;
+  /* so dropdown positions relative to parent */
 }
 
 /* Dropdown menu */
 .sub_menu1 {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-top: 0.75rem solid transparent;
-    background-color: rgb(255, 255, 255);
-    min-width: 20rem;
-    border-radius: 1rem;
-    overflow: hidden;
-    z-index: 300;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    opacity: 0;
-    box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
-    width: 100%;
-    box-sizing: border-box;
-    width: max-content;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 0.75rem solid transparent;
+  background-color: rgb(255, 255, 255);
+  min-width: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 300;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  box-shadow: rgba(76, 76, 76, 0.04) 0px 0.25rem 1rem 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  width: max-content;
 
 }
 
 .sub_menu1 ul {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 /* Show submenu */
 ul li:hover .sub_menu1 {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* Submenu list layout */
 .sub_menu1 ul {
-    display: block;
-    /* vertical stack */
-    margin: 0;
-    padding: 0;
+  display: block;
+  /* vertical stack */
+  margin: 0;
+  padding: 0;
 }
 
 .sub_menu1 li {
-    display: block;
+  display: block;
 }
 
 .sub_menu1 li a {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    color: rgb(76, 76, 76);
-    font-family: Quicksand, sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: left;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(76, 76, 76);
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
 
 }
 
 .sub_menu1 li a:hover {
-    background: #555;
-    color: #ff9800;
+  background: #555;
+  color: #ff9800;
 }
 
 nav ul li {
-    position: relative;
-    padding-bottom: 8px;
-    /* extends hover area */
+  position: relative;
+  padding-bottom: 8px;
+  /* extends hover area */
 }
 
 .sub_menu1 {
-    top: 100%;
-    /* safe placement */
+  top: 100%;
+  /* safe placement */
 }
 
 .sub_menu1 ul li span {
-    float: right;
-    margin-right: 10px;
+  float: right;
+  margin-right: 10px;
 }
 
 
 
 /* Call/WhatsApp/Sign-in styles */
 .nav_call_whatsapp_signin {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center;
-    margin: auto;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .nav_call_logo a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f0f0f0;
-    color: #333;
-    font-size: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-    transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: background 0.2s, color 0.2s;
 }
 
 
 .nav_call_logo a:hover {
-    background: #333;
-    color: #fff;
+  background: #333;
+  color: #fff;
 }
 
 .nav_whatsapp_logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #25D366;
-    border-radius: 50%;
-    width: 40px;
-    /* fixed width */
-    height: 40px;
-    /* fixed height */
-    color: #fff;
-    font-size: 20px;
-    /* keep icon size slightly smaller than box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  border-radius: 50%;
+  width: 40px;
+  /* fixed width */
+  height: 40px;
+  /* fixed height */
+  color: #fff;
+  font-size: 20px;
+  /* keep icon size slightly smaller than box */
 }
 
 
 .signin-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9800;
-    color: #fff;
-    text-decoration: none;
-    /* underline हटाने के लिए */
-    border-radius: 28px;
-    font-weight: bold;
-    text-align: center;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #fff;
+  text-decoration: none;
+  /* underline हटाने के लिए */
+  border-radius: 28px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease;
 }
 
 .container {
-    max-width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 /* understand your needs block section */
 
 .Therapist_container_bg {
-    height: 550px;
-    background-color: rgb(255, 245, 242);
-    height: auto;
-    padding-top: 120px;
-    padding-bottom: 80px;
+  height: 550px;
+  background-color: rgb(255, 245, 242);
+  height: auto;
+  padding-top: 120px;
+  padding-bottom: 80px;
 }
 
 .Therapist_child_container {
-    width: 95%;
-    max-width: 80rem;
-    margin: auto;
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
 }
 
 .Antardhara_home_icon_container {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    /* keeps text in one line */
-    width: auto;
-    cursor: default;
-    /* prevents pointer */
-    opacity: 1;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    gap: 6px;
-    /* space between svg and text */
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* keeps text in one line */
+  width: auto;
+  cursor: default;
+  /* prevents pointer */
+  opacity: 1;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  gap: 6px;
+  /* space between svg and text */
 }
 
 .Antardhara_home_icon_container svg {
-    color: #000;
-    /* change color if needed */
-    font-size: 20px;
-    /* control icon size */
+  color: #000;
+  /* change color if needed */
+  font-size: 20px;
+  /* control icon size */
 }
 
 .brand-text {
-    font-weight: 500;
-    color: #333;
+  font-weight: 500;
+  color: #333;
 }
 
 .Therapist_child_container {
-    display: flex;
-    gap: 10px;
-    padding: 5px 0px;
+  display: flex;
+  gap: 10px;
+  padding: 5px 0px;
 }
 
 .Antardhara_home_icon_container svg {
-    color: rgb(231, 105, 67);
-    font-family: Quicksand, sans-serif;
+  color: rgb(231, 105, 67);
+  font-family: Quicksand, sans-serif;
 
 }
 
 .Antardhara_home_icon_container span {
-    color: rgb(231, 105, 67);
-    font-family: Quicksand, sans-serif;
-    font-size: 0.8rem;
-    line-height: 20px;
-    font-weight: 500;
+  color: rgb(231, 105, 67);
+  font-family: Quicksand, sans-serif;
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-weight: 500;
 }
 
 .Psychiatrists_container p {
-    font-family: Quicksand, sans-serif;
-    color: rgb(117, 117, 117);
-    font-weight: 500;
-    font-size: 0.8rem;
-    line-height: 20px;
+  font-family: Quicksand, sans-serif;
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 20px;
 }
 
 .understand_titl {
-    width: 95%;
-    max-width: 80rem;
-    margin: auto;
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
 }
 
 .understand_titl h1 {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-family: Quicksand, sans-serif;
-    color: rgb(76, 76, 76);
-    padding-top: 25px;
-    text-align: center;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-family: Quicksand, sans-serif;
+  color: rgb(76, 76, 76);
+  padding-top: 25px;
+  text-align: center;
 }
 
 .Therapists_parent_button_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .Thearapist_contain {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Space between icon and text */
-    padding: 10px 16px;
-    font-size: 16px;
-    color: #4C4C4C;
-    /* SVG inherits this color */
-    background-color: #fff;
-    border: 2px solid #4C4C4C;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between icon and text */
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #4C4C4C;
+  /* SVG inherits this color */
+  background-color: #fff;
+  border: 2px solid #4C4C4C;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .Thearapist_contain:hover {
-    background-color: #4C4C4C;
-    color: #fff;
+  background-color: #4C4C4C;
+  color: #fff;
 }
 
 .btn-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    fill: currentColor;
-    /* Inherit text color */
-    stroke: currentColor;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  /* Inherit text color */
+  stroke: currentColor;
 }
 
 .Psychiatrist_parent_button_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .Pyschiatrist_contain {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Space between icon and text */
-    padding: 10px 16px;
-    font-size: 16px;
-    color: #4C4C4C;
-    /* SVG and text color */
-    background-color: #fff;
-    border: 2px solid #4C4C4C;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between icon and text */
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #4C4C4C;
+  /* SVG and text color */
+  background-color: #fff;
+  border: 2px solid #4C4C4C;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .Pyschiatrist_contain:hover {
-    background-color: #4C4C4C;
-    color: #fff;
-    /* SVG inherits this color */
+  background-color: #4C4C4C;
+  color: #fff;
+  /* SVG inherits this color */
 }
 
 .btn-icon {
-    width: 1.25rem;
-    /* Icon width */
-    height: 1.25rem;
-    /* Icon height */
-    fill: none;
-    /* Keep as stroke-only icon */
-    stroke: currentColor;
-    /* Inherit button text color */
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 1.25rem;
+  /* Icon width */
+  height: 1.25rem;
+  /* Icon height */
+  fill: none;
+  /* Keep as stroke-only icon */
+  stroke: currentColor;
+  /* Inherit button text color */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .ChildYouth_parent_button_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .child_youth_contain {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Space between icon and text */
-    padding: 10px 16px;
-    font-size: 16px;
-    color: #4C4C4C;
-    /* Icon and text color */
-    background-color: #fff;
-    border: 2px solid #4C4C4C;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between icon and text */
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #4C4C4C;
+  /* Icon and text color */
+  background-color: #fff;
+  border: 2px solid #4C4C4C;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .child_youth_contain:hover {
-    background-color: #4C4C4C;
-    color: #fff;
-    /* Icon inherits this color */
+  background-color: #4C4C4C;
+  color: #fff;
+  /* Icon inherits this color */
 }
 
 .btn-icon {
-    width: 1.25rem;
-    /* Icon size */
-    height: 1.25rem;
-    fill: none;
-    /* Stroke-only icon */
-    stroke: currentColor;
-    /* Inherit button text color */
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 1.25rem;
+  /* Icon size */
+  height: 1.25rem;
+  fill: none;
+  /* Stroke-only icon */
+  stroke: currentColor;
+  /* Inherit button text color */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .CoupleTherapist_parent_button_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .couple_therapist_contain {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Space between icon and text */
-    padding: 10px 16px;
-    font-size: 16px;
-    color: #4C4C4C;
-    /* Icon and text color */
-    background-color: #fff;
-    border: 2px solid #4C4C4C;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between icon and text */
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #4C4C4C;
+  /* Icon and text color */
+  background-color: #fff;
+  border: 2px solid #4C4C4C;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .couple_therapist_contain:hover {
-    background-color: #4C4C4C;
-    color: #fff;
-    /* Icon inherits this color */
+  background-color: #4C4C4C;
+  color: #fff;
+  /* Icon inherits this color */
 }
 
 .btn-icon {
-    width: 1.25rem;
-    /* Icon width */
-    height: 1.25rem;
-    /* Icon height */
-    fill: none;
-    /* Stroke-only icon */
-    stroke: currentColor;
-    /* Inherit button text color */
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 1.25rem;
+  /* Icon width */
+  height: 1.25rem;
+  /* Icon height */
+  fill: none;
+  /* Stroke-only icon */
+  stroke: currentColor;
+  /* Inherit button text color */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .Therapists_parent_button_container {
@@ -641,7 +641,8 @@ button.active .btn-icon {
 
 /* Override for CHAT button */
 .Thearapist_contain .btn-icon {
-  stroke: rgb(231, 105, 67); /* orange icon by default */
+  stroke: rgb(231, 105, 67);
+  /* orange icon by default */
   fill: none;
   transition: all 0.3s ease;
 }
@@ -661,33 +662,339 @@ button.active .btn-icon {
 /* ******** slot book container section **** */
 
 .slot_book_container_parent {
-    background-color: rgb(255, 245, 242);
+  background-color: white;
+  height: auto;
+  margin-top: 40px;
 }
 
 .slot_book_container_child {
 
-     width: 95%;
-    max-width: 80rem;
-    margin: auto;
+  width: 95%;
+  max-width: 80rem;
+  margin: auto;
 }
 
-/* 
-.Therapist_container_bg {
-    height: 550px;
-    background-color: rgb(255, 245, 242);
-    height: auto;
-    padding-top: 120px;
-    padding-bottom: 80px;
+.drop_down_container_child {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-.Therapist_child_container {
-    width: 95%;
-    max-width: 80rem;
-    margin: auto;
+/* select centre drop down */
+
+/* Dropdown Button */
+.dropdown-btn {
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+  border: 1px solid #d0d7e1;
+  border-radius: 40px;
+  /* ✅ smoother curve */
+  padding: 12px 18px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  border-color: #0d6efd;
+  background: #f0f7ff;
+  transform: translateY(-1px);
+}
+
+
+.dropdown-btn img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.dropdown-btn i {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dropdown-btn>span {
+  font-family: "Quicksand";
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.selected-city {
+  display: flex;
+  align-items: center;
+  background: #e7f1ff;
+  border-radius: 20px;
+  padding: 4px 10px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.selected-city span {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #0d6efd;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+/* MODAL BOX — fixed perfect centering */
+.modal-content {
+  background: #fff;
+  position: fixed;
+  /* ✅ instead of absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ✅ perfect center */
+  margin: 0;
+  padding: 24px;
+  width: 540px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  max-height: 565px;
+  /* fixed height */
+}
+
+/* Animation cleanup for smooth appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+    /* start slightly above */
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    /* end exactly center */
+  }
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header>span:first-of-type {
+  font-family: "Quicksand";
+  font-weight: 700;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+
+/* .close {
+  cursor: pointer;
+  font-size: 22px;
+  color: #6b7280;
 } */
 
+.close {
+  cursor: pointer;
+  font-size: 28px;
+  color: #6b7280;
+  transition: 0.2s ease;
+}
+
+.close:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
 
 
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 12px 0;
+}
+
+.sub-text {
+  font-size: 14px;
+  margin-bottom: 18px;
+  font-family: "Quicksand";
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  text-align: left;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
 
 
+/* SCROLLABLE AREA INSIDE MODAL */
+.city-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.city-list-scroll::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Edge */
+}
+
+/* CITY BOX STYLING */
+.city-box {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #fafafa;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  
+}
+
+.city-box:hover {
+  border-color: #0d6efd;
+  background: #f9fbff;
+}
+
+.city-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-header img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.city-header h3 {
+  flex: 1;
+  font-size: 16px;
+  margin: 0;
+  color: rgb(76, 76, 76);
+  font-family: Quicksand,sans-serif;
+}
+
+/* AREAS */
+.areas {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.areas.open {
+  max-height: 200px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.areas label {
+  display: block;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+  font-family: Quicksand, sans-serif;
+}
+
+.selected-info {
+  font-size: 13px;
+  color: #072483;
+  margin-top: 6px;
+  margin-left: 6px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+  color: rgb(76, 76, 76);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+
+}
+
+.selected-info > label  {
+  font-family: Quicksand, sans-serif;
+}
+
+/* ✅ FIXED FOOTER */
+.modal-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-clear {
+  background: #f3f4f6;
+  color: #374151;
+  font-family: "Quicksand";
+  border-radius: 2.5rem;
+  width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-clear:hover {
+  background: #e5e7eb;
+}
+.btn-clear.active {
+  background: #0d6efd;
+}
+
+.btn-select {
+  background: #c9d3e3;
+  color: #fff;
+  font-family: "Quicksand";
+  border-radius: 2.5rem;
+  width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-select.active {
+  background: #0d6efd;
+}
+
+
+/** css implementedt for select centre manually by s **/
+
+.select_center_drop_container {
+  width: fit-content;
+}
 

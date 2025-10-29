@@ -258,27 +258,347 @@
         </script>
     </div>
     <div class="slot_book_container_parent">
-       <div class="slot_book_container_child">
+        <div class="slot_book_container_child">
             <div class="drop_down_container_main">
                 <div class="drop_down_container_child">
                     <div class="select_center_drop_container">
-                            
-                    </div>
-                    <div class="select_expertise_drop_container">
+                        <!-- Dropdown -->
+                        <div class="dropdown-btn" id="openModal">
+                            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location" />
+                            <span>Select Centre</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
 
-                    </div>
-                    <div class="select_languages_drop_container">
+                        <!-- ✅ Vertical line (optional) -->
+                        <div class="vertical-line"></div>
 
-                    </div>
-                    <div class="select_prices_drop_container">
+                        <!-- Modal -->
+                        <div class="modal" id="centreModal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span>Select Centre</span>
+                                    <span class="close" id="closeModal">&times;</span>
+                                </div>
+                                <hr />
+                                <div class="sub-text">For an in-person session, select your preferred city or centre
+                                    below.</div>
 
-                    </div>
-                    <div class="select_gender_drop_container">
+                                <!-- ✅ Scrollable area -->
+                                <div class="city-list-scroll">
+                                    <!-- Hyderabad -->
+                                    <div class="city-box" data-city="Hyderabad">
+                                        <div class="city-header">
+                                            <img src="../Style/ExpertTherapist_images/Hyderabad Logo.png"
+                                                alt="Hyderabad" />
+                                            <h3>Hyderabad</h3>
+                                            <input type="radio" name="city" value="Hyderabad" />
+                                        </div>
+                                        <div class="areas">
+                                            <label><input type="checkbox" class="area" value="All Centres" /> All
+                                                Centres</label>
+                                            <label><input type="checkbox" class="area" value="Banjara Hills" /> Banjara
+                                                Hills</label>
+                                            <label><input type="checkbox" class="area" value="Jublie Hills" /> Jublie
+                                                Hills</label>
+                                            <label><input type="checkbox" class="area" value="Madhapur" />
+                                                Madhapur</label>
+                                            <label><input type="checkbox" class="area" value="Hi tech city" /> Hi tech
+                                                city</label>
+                                        </div>
+                                        <div class="selected-info"></div>
+                                    </div>
 
+                                    <!-- Bengaluru -->
+                                    <div class="city-box" data-city="Bengaluru">
+                                        <div class="city-header">
+                                            <img src="../Style/ExpertTherapist_images/Bengaluru Logo.png"
+                                                alt="Bengaluru" />
+                                            <h3>Bengaluru</h3>
+                                            <input type="radio" name="city" value="Bengaluru" />
+                                        </div>
+                                        <div class="areas">
+                                            <label><input type="checkbox" class="area" value="All Centres" /> All
+                                                Centres</label>
+                                            <label><input type="checkbox" class="area" value="Whitefield" />
+                                                Whitefield</label>
+                                            <label><input type="checkbox" class="area" value="Indiranagar" />
+                                                Indiranagar</label>
+                                        </div>
+                                        <div class="selected-info"></div>
+                                    </div>
+
+                                    <!-- Mumbai -->
+                                    <div class="city-box" data-city="Mumbai">
+                                        <div class="city-header">
+                                            <img src="../Style/ExpertTherapist_images/Taj Mahal Logo.png"
+                                                alt="Mumbai" />
+                                            <h3>Mumbai</h3>
+                                            <input type="radio" name="city" value="Mumbai" />
+                                        </div>
+                                        <div class="areas">
+                                            <label><input type="checkbox" class="area" value="All Centres" /> All
+                                                Centres</label>
+                                            <label><input type="checkbox" class="area" value="Andheri" />
+                                                Andheri</label>
+                                            <label><input type="checkbox" class="area" value="Bandra" /> Bandra</label>
+                                        </div>
+                                        <div class="selected-info"></div>
+                                    </div>
+
+                                    <!-- Delhi -->
+                                    <div class="city-box" data-city="Delhi">
+                                        <div class="city-header">
+                                            <img src="../Style/ExpertTherapist_images/Delhi Logo.png" alt="Delhi" />
+                                            <h3>Delhi</h3>
+                                            <input type="radio" name="city" value="Delhi" />
+                                        </div>
+                                        <div class="areas">
+                                            <label><input type="checkbox" class="area" value="All Centres" /> All
+                                                Centres</label>
+                                            <label><input type="checkbox" class="area" value="Lal killa road" /> Lal
+                                                killa road</label>
+                                            <label><input type="checkbox" class="area" value="Sarojani Market" />
+                                                Sarojani Market</label>
+                                        </div>
+                                        <div class="selected-info"></div>
+                                    </div>
+                                </div>
+
+                                <!-- ✅ Footer (fixed position inside modal) -->
+                                <div class="modal-footer">
+                                    <button class="btn btn-clear" id="clearAll">Clear All</button>
+                                    <button class="btn btn-select" id="selectBtn">Select</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    // --- elements ---
+                    const openModal = document.getElementById("openModal");
+                    const modal = document.getElementById("centreModal");
+                    const closeModal = document.getElementById("closeModal");
+                    const selectBtn = document.getElementById("selectBtn");
+                    const clearAll = document.getElementById("clearAll");
+                    const cityBoxes = document.querySelectorAll(".city-box");
+                    const dropdownBtn = document.querySelector(".dropdown-btn");
+                    const dropdownLabel = dropdownBtn.querySelector("span"); // your "Select Centre" span inside the button
+                    const arrowIcon = dropdownBtn.querySelector("i.fa-angle-down"); // the down arrow inside the button (matches your markup)
+                    let selectedCity = null;
+
+                    // --- helper: show default areas text under each city (same idea as your original function) ---
+                    function updateDefaultAreas() {
+                        cityBoxes.forEach((box) => {
+                            const selectedInfo = box.querySelector(".selected-info");
+                            const allAreas = [...box.querySelectorAll(".area")].map((a) => a.value);
+                            const displayAreas = allAreas.filter((a) => a !== "All Centres");
+                            const header = box.querySelector(".city-header");
+                            header.insertAdjacentElement("afterend", selectedInfo);
+                            selectedInfo.textContent = displayAreas.join(", ");
+                        });
+                    }
+
+                    // --- reset all selections (keeps behaviour you already had) ---
+                    function resetFilters() {
+                        document.querySelectorAll("input[type='checkbox']").forEach((c) => (c.checked = false));
+                        document.querySelectorAll("input[type='radio']").forEach((r) => (r.checked = false));
+                        document.querySelectorAll(".selected-info").forEach((i) => (i.textContent = ""));
+                        document.querySelectorAll(".areas").forEach((a) => a.classList.remove("open"));
+                        cityBoxes.forEach((b) => {
+                            b.classList.remove("selected-city-box");
+                            b.style.backgroundColor = "#fafafa";
+                        });
+                        selectBtn.classList.remove("active");
+                        selectedCity = null;
+                    }
+
+                    // --- modal open/close ---
+                    openModal.onclick = () => {
+                        modal.style.display = "block";
+                        // keep existing state or show defaults:
+                        updateDefaultAreas();
+                    };
+                    closeModal.onclick = () => (modal.style.display = "none");
+                    window.onclick = (e) => {
+                        if (e.target == modal) modal.style.display = "none";
+                    };
+
+                    // --- city boxes behaviour (click to expand, radio selection, hover) ---
+                    cityBoxes.forEach((box) => {
+                        const radio = box.querySelector("input[type='radio']");
+                        const areas = box.querySelector(".areas");
+
+                        // Hover look (unchanged)
+                        box.addEventListener("mouseenter", () => {
+                            if (!box.classList.contains("selected-city-box")) box.style.backgroundColor = "#f0f0f0";
+                        });
+                        box.addEventListener("mouseleave", () => {
+                            if (!box.classList.contains("selected-city-box")) box.style.backgroundColor = "#fafafa";
+                        });
+
+                        // Click on box toggles open/close (but ignore clicks on inputs)
+                        box.addEventListener("click", (e) => {
+                            if (e.target.type === "checkbox" || e.target.type === "radio") return;
+
+                            const isOpen = areas.classList.contains("open");
+                            // close all
+                            document.querySelectorAll(".areas").forEach((a) => a.classList.remove("open"));
+                            cityBoxes.forEach((b) => {
+                                b.classList.remove("selected-city-box");
+                                b.style.backgroundColor = "#fafafa";
+                            });
+
+                            if (!isOpen) {
+                                // open clicked
+                                areas.classList.add("open");
+                                radio.checked = true;
+                                selectedCity = radio.value;
+                                box.classList.add("selected-city-box");
+                                box.style.backgroundColor = "#d1f7c4";
+                            } else {
+                                // close clicked
+                                areas.classList.remove("open");
+                                radio.checked = false;
+                                box.classList.remove("selected-city-box");
+                                box.style.backgroundColor = "#fafafa";
+                                // if closing and no radio selected anywhere -> clear selectedCity
+                                const anyRadio = document.querySelector("input[name='city']:checked");
+                                selectedCity = anyRadio ? anyRadio.value : null;
+                            }
+
+                            // clear other city checkboxes (keeps original behaviour)
+                            cityBoxes.forEach((otherBox) => {
+                                if (otherBox !== box) {
+                                    otherBox.querySelectorAll("input[type='checkbox']").forEach((c) => (c.checked = false));
+                                    otherBox.querySelector(".selected-info").textContent = [...otherBox.querySelectorAll(".area")]
+                                        .map((a) => a.value)
+                                        .filter((v) => v !== "All Centres")
+                                        .join(", ");
+                                }
+                            });
+                        });
+
+                        // radio direct click should select city
+                        radio.addEventListener("change", () => {
+                            if (radio.checked) {
+                                selectedCity = radio.value;
+                                cityBoxes.forEach((otherBox) => {
+                                    if (otherBox !== box) {
+                                        otherBox.querySelectorAll("input[type='checkbox']").forEach((c) => (c.checked = false));
+                                        otherBox.querySelector(".selected-info").textContent = [...otherBox.querySelectorAll(".area")]
+                                            .map((a) => a.value)
+                                            .filter((v) => v !== "All Centres")
+                                            .join(", ");
+                                        otherBox.classList.remove("selected-city-box");
+                                        otherBox.style.backgroundColor = "#fafafa";
+                                    }
+                                });
+                                box.classList.add("selected-city-box");
+                                box.style.backgroundColor = "#d1f7c4";
+                            } else {
+                                // radio uncheck (rare) -> clear
+                                const anyRadio = document.querySelector("input[name='city']:checked");
+                                selectedCity = anyRadio ? anyRadio.value : null;
+                            }
+                        });
+                    });
+
+                    // --- update per-city selected-info when area checkboxes change ---
+                    document.querySelectorAll(".area").forEach((chk) => {
+                        chk.addEventListener("change", () => {
+                            // enable/disable select button (original behavior)
+                            selectBtn.classList.toggle("active", document.querySelectorAll(".area:checked").length > 0);
+
+                            cityBoxes.forEach((box) => {
+                                const selectedInfo = box.querySelector(".selected-info");
+                                const checked = [...box.querySelectorAll(".area:checked")].map((a) => a.value);
+                                const header = box.querySelector(".city-header");
+                                header.insertAdjacentElement("afterend", selectedInfo);
+
+                                if (checked.length === 0) {
+                                    const allAreas = [...box.querySelectorAll(".area")]
+                                        .map((a) => a.value)
+                                        .filter((a) => a !== "All Centres");
+                                    selectedInfo.textContent = allAreas.join(", ");
+                                } else {
+                                    selectedInfo.textContent = checked.filter((v) => v !== "All Centres").join(", ");
+                                }
+                            });
+                        });
+                    });
+
+                    // --- SELECT button behavior: create chip (city + ×), hide original span + hide arrow ---
+                    selectBtn.addEventListener("click", () => {
+                        // only act if active (checkbox selected)
+                        if (!selectBtn.classList.contains("active")) return;
+
+                        // ensure selectedCity is set; if not, try to read checked radio
+                        if (!selectedCity) {
+                            const checkedRadio = document.querySelector("input[name='city']:checked");
+                            selectedCity = checkedRadio ? checkedRadio.value : null;
+                        }
+                        // if still no selectedCity, abort (safety)
+                        if (!selectedCity) return;
+
+                        modal.style.display = "none";
+
+                        // remove any existing chip
+                        dropdownBtn.querySelectorAll(".selected-city").forEach((e) => e.remove());
+
+                        // hide the original "Select Centre" label
+                        if (dropdownLabel) dropdownLabel.style.display = "none";
+
+                        // hide the down arrow icon (so only location icon + city + × remain)
+                        if (arrowIcon) arrowIcon.style.display = "none";
+
+                        // create chip
+                        const selectedDiv = document.createElement("div");
+                        selectedDiv.classList.add("selected-city");
+                        selectedDiv.innerHTML = `${selectedCity} <span class="selected-city-close" title="Clear">&times;</span>`;
+
+                        // insert the chip before the arrow icon (keeps layout consistent)
+                        if (arrowIcon) dropdownBtn.insertBefore(selectedDiv, arrowIcon);
+                        else dropdownBtn.appendChild(selectedDiv);
+
+                        // clicking × on chip should clear filters and restore default UI (but NOT reopen modal)
+                        selectedDiv.querySelector(".selected-city-close").addEventListener("click", (event) => {
+                            event.stopPropagation(); // ✅ prevents dropdown button’s click (which opens modal)
+                            selectedDiv.remove();
+                            if (dropdownLabel) dropdownLabel.style.display = "";
+                            if (arrowIcon) arrowIcon.style.display = "";
+                            resetFilters();
+                            // ❌ do NOT open modal
+                        });
+
+                    });
+
+                    // --- Clear All button inside modal: clear selections + restore dropdown UI ---
+                    clearAll.addEventListener("click", () => {
+                        resetFilters();
+                        // remove visible chip(s)
+                        dropdownBtn.querySelectorAll(".selected-city").forEach((e) => e.remove());
+                        // restore label and arrow
+                        if (dropdownLabel) dropdownLabel.style.display = "";
+                        if (arrowIcon) arrowIcon.style.display = "";
+                    });
+
+                    // Initialize default display for area lists
+                    updateDefaultAreas();
+                </script>
+
             </div>
-       </div> 
+            <div class="select_languages_drop_container">
+
+            </div>
+            <div class="select_prices_drop_container">
+
+            </div>
+            <div class="select_gender_drop_container">
+
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 </body>
 
